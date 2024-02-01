@@ -32,7 +32,7 @@ app.use("/sales" , salesRoutes);
 /* MONGOOSE CONNECT */
 const PORT=process.env.PORT || 8080;
 mongoose.connect(process.env.MONGO_URL,
-     { useNewUrlParser: true, useUnifiedTopology: true }
+     { useNewUrlParser: true, useUnifiedTopology: false }
      ).then(()=>{
     app.listen(PORT,()=>{
         console.log(`Server Port : ${PORT}`);
